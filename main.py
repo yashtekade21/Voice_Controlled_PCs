@@ -3,7 +3,7 @@ import speech_recognition as sr
 import json
 import os
 
-# Dictionary mapping app names to actual Chocolatey package names
+# dictionary mapping app names to actual chocolatey package names
 app_map = {
     "vscode": "visualstudiocode",
     "visual studio code": "visualstudiocode",
@@ -106,13 +106,12 @@ def execute_command(host, username, password, command):
     except Exception as e:
         print(f"Error executing command on {host}: {str(e)}")
 
-# Load hosts, usernames, and passwords from the JSON file
+# load hosts, usernames, and passwords from the .json file
 def load_hosts_from_json(filename):
     with open(filename, 'r') as file:
         config = json.load(file)
     return config["hosts"]
 
-# Securely load sensitive data from environment variables
 def get_env_variable(key, default=None):
     return os.getenv(key, default)
 
