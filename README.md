@@ -2,6 +2,7 @@ The project uses secure shell (ssh) for remotely controlling the PC's via a sing
 It also take care of unauhorized access and only authorized person can control all the PC's. 
 
 **For Windows System**
+
 **Step 1:** Install chocolatey in windows installed client PCs. 
 Powershell commands:
 1) Get-ExecutionPolicy (if restricted then execute below command) 
